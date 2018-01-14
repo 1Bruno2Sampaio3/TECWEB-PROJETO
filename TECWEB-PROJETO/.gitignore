@@ -1,0 +1,13 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/Estoque/packages
+/Estoque/Estoque/App_Data
+/Estoque/Estoque/obj/Debug
+/Estoque/Estoque/bin
+/Estoque/.vs/config
+/ControleEstoque/.vs/config/applicationhost.config
+/Estoque/.vs/Estoque/v14/.suo
+/ControleEstoque/ControleEstoque/obj/Debug
+/ControleEstoque/.vs/ControleEstoque/v14

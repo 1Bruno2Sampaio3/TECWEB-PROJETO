@@ -1,0 +1,65 @@
+﻿@model ControleEstoque.Models.Produto
+
+@{
+    ViewBag.Title = "Detalhes do Produtos";
+}
+
+<h2>Detalhes do Produtos</h2>
+
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Nome)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nome)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Descricao)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Descricao)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Quantidade)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Quantidade)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CodigoExterno)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CodigoExterno)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FornecedorId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FornecedorId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CategoriaId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CategoriaId)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Listar Produtos", "Index") |
+    @Html.ActionLink("Editar", "Edit", new { id = Model.Id })
+</p>

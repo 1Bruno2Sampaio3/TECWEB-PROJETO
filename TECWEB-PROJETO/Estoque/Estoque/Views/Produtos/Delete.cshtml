@@ -1,0 +1,71 @@
+﻿@model ControleEstoque.Models.Produto
+
+@{
+    ViewBag.Title = "Deletar Produto";
+}
+
+<h2>Novo Produto</h2>
+
+<h3>Você está certo que quer deletar?</h3>
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Nome)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nome)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Descricao)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Descricao)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Quantidade)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Quantidade)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CodigoExterno)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CodigoExterno)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FornecedorId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FornecedorId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CategoriaId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CategoriaId)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            @Html.ActionLink("Listar Produtos", "Index") |
+            <input type="submit" value="Deletar" class="btn btn-default" /> 
+        </div>
+    }
+</div>

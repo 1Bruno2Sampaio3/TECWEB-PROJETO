@@ -1,0 +1,31 @@
+﻿@model ControleEstoque.Models.Fornecedor
+
+@{
+    ViewBag.Title = "Deletar Fornecedor";
+}
+
+<h2>Deletar Fornecedor</h2>
+
+<h3>Você está certo que quer deletar?</h3>
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Nome)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nome)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            @Html.ActionLink("Listar Fornecedores", "Index") | 
+            <input type="submit" value="Deletar" class="btn btn-default" /> 
+        </div>
+    }
+</div>

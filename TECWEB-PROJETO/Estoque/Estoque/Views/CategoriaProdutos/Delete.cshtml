@@ -1,0 +1,39 @@
+﻿@model ControleEstoque.Models.CategoriaProduto
+
+@{
+    ViewBag.Title = "Deletar Categoria";
+}
+
+<h2>Deletar Categoria</h2>
+
+<h3>Você está certo que quer deletar?</h3>
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Nome)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nome)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Descricao)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Descricao)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Deletar" class="btn btn-default" /> |
+            @Html.ActionLink("Listar Categorias", "Index")
+        </div>
+    }
+</div>
